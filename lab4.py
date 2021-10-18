@@ -61,6 +61,7 @@ elif ('LED3' in form) : # changed from ON to OFF
   GPIO.output(ledPin3, 1)
   L = 3
 
+data = cgi.FieldStorage()
 #p = data.getvalue('slider1')
 s1 = data.getvalue('slider1')
 
