@@ -29,13 +29,13 @@ while True:
     data = json.load(f)
     dutyCycle = float(data['slider1'])
  
-if data['Le'] == 'LED1':
+if data['Le'] == 1:
   pwm1.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
-if data['Le'] == 'LED2':
+if data['Le'] == 2:
   pwm2.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
-if data['Le'] == 'LED3':
+if data['Le'] == 3:
   pwm3.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
 
