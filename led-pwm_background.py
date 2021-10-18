@@ -5,6 +5,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import json
 
 ledPin1 = 19
 ledPin2 = 17

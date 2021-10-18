@@ -1,5 +1,6 @@
 #!/usr/bin/python37all
 import cgi
+import json
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
 l = data.getvalue('LED')
