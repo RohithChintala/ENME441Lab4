@@ -17,7 +17,7 @@ cgitb.enable()
 ledPin1 = 19
 ledPin2 = 20
 ledPin3 = 21
-#L = 0
+L = 1
 
 # GPIO setup:
 GPIO.setmode(GPIO.BCM)      # choose pin numbering convention (alt = BOARD)
@@ -25,6 +25,7 @@ GPIO.setwarnings(False)     # ignore warnings due to multiple scripts at same ti
 GPIO.setup(ledPin1, GPIO.OUT)
 GPIO.setup(ledPin2, GPIO.OUT)
 GPIO.setup(ledPin3, GPIO.OUT)
+
 
 # Begin generatation of web page showing current state:
 print('Content-type:text/html\n\n')    # blank line = end of headers
