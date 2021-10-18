@@ -43,6 +43,7 @@ print('<br><br>')
 # "if ('on' in form)" instead of data.getvalue() since we have 2 different
 # button names (unlike prior example with a single button name & 2 button values): 
 form = cgi.FieldStorage() # get POST data
+
 '''
 if ('on' in form): # changed from OFF to ON
   GPIO.output(ledPin, 1)
@@ -52,17 +53,21 @@ elif ('off' in form) : # changed from ON to OFF
 
 if ('LED1' in form): # changed from OFF to ON
   GPIO.output(ledPin1, 1)
+  L = 1
 elif ('LED2' in form) : # changed from ON to OFF
   GPIO.output(ledPin2, 1)
+  L = 2
 elif ('LED3' in form) : # changed from ON to OFF
   GPIO.output(ledPin3, 1)
+  L = 3
 
 #p = data.getvalue('slider1')
 s1 = data.getvalue('slider1')
+
 #s2 = data.getvalue('slider2')
-#data = {"slider1":s1, "slider2":s2}
+data = {"slider1":s1, "L":L}
 with open('led-pwm-multiple.txt', 'w') as f:
-  json.dump(s1,f)
+  json.dump(data,f)
 
 
 #with open('lab4.txt', 'w') as f: 

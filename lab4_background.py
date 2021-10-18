@@ -8,12 +8,18 @@ import time
 import json
 
 ledPin1 = 19
+ledPin2 = 20
+ledPin3 = 21
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin1, GPIO.OUT)
+GPIO.setup(ledPin2, GPIO.OUT)
+GPIO.setup(ledPin3, GPIO.OUT)
 
-pwm = GPIO.PWM(ledPin, 100) # PWM object on our pin at 100 Hz
-pwm.start(0) # start with LED off
+
+pwm1 = GPIO.PWM(ledPin1, 100) # PWM object on our pin at 100 Hz
+pwm1 = GPIO.PWM(ledPin2, 100) # PWM object on our pin at 100 Hz
+pwm3 = GPIO.PWM(ledPin3, 100) # PWM object on our pin at 100 Hz
 
 while True:
  # with open("led_pwm.txt", 'r') as f:
@@ -23,6 +29,16 @@ while True:
 
   with open('led-pwm-multiple.txt', 'r') as f:
     data = json.load(f)
+  if data[L] == 1:
+    pwm1.start(0) 
+  if data[L] == 2:
+    pwm2.start(0) 
+  if data[L] == 3:
+    pwm3.start(0) 
+
+
+
+  #pwm.start(0) # start with LED off
   #print("slider 1 = "+ str(data['slider1']))
   #print("slider 2 = "+ str(data['slider2']))
   dutyCycle = float(data['slider1'])
