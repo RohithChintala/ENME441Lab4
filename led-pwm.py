@@ -3,7 +3,7 @@ import cgi
 import json
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
-l = data.getvalue('LED')
+l = float(data.getvalue('LED'))
 
 
 

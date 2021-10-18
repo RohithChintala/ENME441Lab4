@@ -28,8 +28,19 @@ while True:
   with open('led-pwm.txt', 'r') as f:
     data = json.load(f)
     dutyCycle = float(data['slider1'])
+ 
+if data['l'] == 1:
   pwm1.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
+if data['l'] == 2:
+  pwm2.ChangeDutyCycle(dutyCycle)
+  time.sleep(0.1)
+if data['l'] == 3:
+  pwm3.ChangeDutyCycle(dutyCycle)
+  time.sleep(0.1)
+
+#pwm1.ChangeDutyCycle(dutyCycle)
+#time.sleep(0.1)
 '''
 while True:
   with open("led-pwm.txt", 'r') as f:
