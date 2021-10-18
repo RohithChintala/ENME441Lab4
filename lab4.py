@@ -96,6 +96,7 @@ print('<form action="/cgi-bin/lab4.py" method="POST" target="_self">')
 print('<input type="radio" name="led" value="LED1"> LED 1 <br>')
 print('<input type="radio" name="led" value="LED2"> LED 2 <br>')
 print('<input type="radio" name="led" value="LED3"> LED 3 <br>')
+print('<input type="submit" value="Submit">')
 print('<input type="range" name="slider1" min ="0" max="100" value ="50"/><br>')
 print('</form>')
 
