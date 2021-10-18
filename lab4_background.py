@@ -33,6 +33,9 @@ while True:
   with open('lab4data.txt', 'r') as f:
     data = json.load(f)
     dutyCycle = float(data['slider1'])
+    pwm1.ChangeDutyCycle(dutyCycle)
+    time.sleep(0.1)
+  '''
   if data['L'] == 1:
     pwm1.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
@@ -42,7 +45,7 @@ while True:
   if data['L'] == 3:
     pwm3.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
-
+  '''
 
 
   #pwm.start(0) # start with LED off
