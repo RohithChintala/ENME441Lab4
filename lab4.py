@@ -85,12 +85,12 @@ with open('lab4data.txt', 'w') as f:
 
 
 # display current LED state to user:
-if GPIO.input(ledPin1):
-  print('hello')
-else:
-  print('<font color="black"> LED IS OFF')
-print('<font color="black">')
-print('<br><br>')
+#if GPIO.input(ledPin1):
+#  print('hello')
+#else:
+#  print('<font color="black"> LED IS OFF')
+#print('<font color="black">')
+#print('<br><br>')
 
 
 # Create the buttons to change LED state.  Use 'target="_blank"
