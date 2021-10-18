@@ -3,7 +3,7 @@ import cgi
 import json
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
-
+L = 1
 if ('LED1' in data): # changed from OFF to ON
   L = 1
 elif ('LED2' in data) : # changed from ON to OFF
@@ -11,7 +11,7 @@ elif ('LED2' in data) : # changed from ON to OFF
 elif ('LED3' in data) : # changed from ON to OFF
   L = 3
 
-slide = {"slider1":s1, "L":L}
+slide = {"slider1":s1, "Le":L}
 with open('led-pwm.txt', 'w') as f:
   json.dump(slide,f)
 
