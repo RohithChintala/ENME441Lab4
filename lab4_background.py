@@ -32,13 +32,16 @@ while True:
 
   with open('lab4data.txt', 'r') as f:
     data = json.load(f)
-  dutyCycle = float(data['slider1'])
+    dutyCycle = float(data['slider1'])
   if data['L'] == 1:
     pwm1.ChangeDutyCycle(dutyCycle)
+    time.sleep(0.1)
   if data['L'] == 2:
     pwm2.ChangeDutyCycle(dutyCycle)
+    time.sleep(0.1)
   if data['L'] == 3:
     pwm3.ChangeDutyCycle(dutyCycle)
+    time.sleep(0.1)
 
 
 
