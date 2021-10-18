@@ -2,6 +2,7 @@
 import cgi
 data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
+l = data.getvalue('LED')
 
 
 
@@ -13,8 +14,7 @@ elif ('LED2' in data) : # changed from ON to OFF
   L = 2
 elif ('LED3' in data) : # changed from ON to OFF
   L = 3
-#s1 = form.getvalue('slider1')
-slide = {"slider1":s1, "L":L}
+slide = {"slider1":s1, "l":l}
 with open('led-pwm.txt', 'w') as f:
   json.dump(slide,f)
 
