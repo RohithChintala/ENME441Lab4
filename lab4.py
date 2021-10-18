@@ -78,7 +78,7 @@ with open('lab4data.txt', 'w') as f:
 
 # display current LED state to user:
 if GPIO.input(ledPin1):
-  print('<font color="red"> LED IS ON')
+  print(L)
 else:
   print('<font color="black"> LED IS OFF')
 print('<font color="black">')
@@ -93,10 +93,9 @@ print('<br><br>')
 #print('</form>')
 
 print('<form action="/cgi-bin/lab4.py" method="POST" target="_self">')
-print('<input type="radio" name="led" value="LED1" checked> LED 1 <br>')
+print('<input type="radio" name="led" value="LED1"> LED 1 <br>')
 print('<input type="radio" name="led" value="LED2"> LED 2 <br>')
 print('<input type="radio" name="led" value="LED3"> LED 3 <br>')
-print('<input type="submit" value="Submit">')
 print('<input type="range" name="slider1" min ="0" max="100" value ="50"/><br>')
 print('</form>')
 
