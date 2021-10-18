@@ -32,7 +32,7 @@ print('Content-type:text/html\n\n')    # blank line = end of headers
 print('<html>')
 print('<head>')
 print('<title>LED switch test</title>')
-print('<meta http-equiv="refresh" content="30">')  # refresh to update LED state
+print('<meta http-equiv="refresh" content="15">')  # refresh to update LED state
 print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#AAAAFF;border:1px;text-align:center">')
@@ -63,6 +63,7 @@ elif ('LED3' in form) : # changed from ON to OFF
   GPIO.output(ledPin3, 1)
   L = 3
 '''
+
 if ('LED1' in form): # changed from OFF to ON
   L = 1
 elif ('LED2' in form) : # changed from ON to OFF
@@ -101,9 +102,9 @@ with open('lab4data.txt', 'w') as f:
 #print('</form>')
 
 print('<form action="/cgi-bin/lab4.py" method="POST" target="_self">')
-print('<input type="radio" name="LED1" value="LED1" checked> LED 1 <br>')
-print('<input type="radio" name="LED2" value="LED2"> LED 2 <br>')
-print('<input type="radio" name="LED3" value="LED3"> LED 3 <br>')
+print('<input type="radio" name="LED1" value="ffLED1" checked> LED 1 <br>')
+print('<input type="radio" name="LED2" value="ffLED2"> LED 2 <br>')
+print('<input type="radio" name="LED3" value="ffLED3"> LED 3 <br>')
 print('<input type="submit" value="Submit">')
 print('<input type="range" name="slider1" min ="0" max="100" value ="50"/><br>')
 print('</form>')

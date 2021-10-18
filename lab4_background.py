@@ -12,14 +12,14 @@ ledPin2 = 17
 ledPin3 = 27
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(ledPin1, GPIO.OUT)
-GPIO.setup(ledPin2, GPIO.OUT)
-GPIO.setup(ledPin3, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
 
 
-pwm1 = GPIO.PWM(ledPin1, 100) # PWM object on our pin at 100 Hz
-pwm1 = GPIO.PWM(ledPin2, 100) # PWM object on our pin at 100 Hz
-pwm3 = GPIO.PWM(ledPin3, 100) # PWM object on our pin at 100 Hz
+pwm1 = GPIO.PWM(24, 100) # PWM object on our pin at 100 Hz
+pwm1 = GPIO.PWM(17, 100) # PWM object on our pin at 100 Hz
+pwm3 = GPIO.PWM(27, 100) # PWM object on our pin at 100 Hz
 pwm1.start(0) 
 pwm2.start(0) 
 pwm3.start(0) 
@@ -33,8 +33,8 @@ while True:
   with open('lab4data.txt', 'r') as f:
     data = json.load(f)
     dutyCycle = float(data['slider1'])
-    pwm1.ChangeDutyCycle(dutyCycle)
-    time.sleep(0.1)
+  pwm1.ChangeDutyCycle(dutyCycle)
+  time.sleep(0.1)
   '''
   if data['L'] == 1:
     pwm1.ChangeDutyCycle(dutyCycle)
