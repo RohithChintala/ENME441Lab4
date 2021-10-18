@@ -7,9 +7,9 @@ import RPi.GPIO as GPIO
 import time
 import json
 
-ledPin1 = 19
-ledPin2 = 20
-ledPin3 = 21
+ledPin1 = 4
+ledPin2 = 17
+ledPin3 = 27
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin1, GPIO.OUT)

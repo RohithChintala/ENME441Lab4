@@ -14,17 +14,17 @@ import json
 import cgitb
 cgitb.enable()
 
-ledPin1 = 19
-ledPin2 = 20
-ledPin3 = 21
+#ledPin1 = 4
+#ledPin2 = 17
+#ledPin3 = 27
 L = 1
 
 # GPIO setup:
 GPIO.setmode(GPIO.BCM)      # choose pin numbering convention (alt = BOARD)
 GPIO.setwarnings(False)     # ignore warnings due to multiple scripts at same time
-GPIO.setup(ledPin1, GPIO.OUT)
-GPIO.setup(ledPin2, GPIO.OUT)
-GPIO.setup(ledPin3, GPIO.OUT)
+#GPIO.setup(ledPin1, GPIO.OUT)
+#GPIO.setup(ledPin2, GPIO.OUT)
+#GPIO.setup(ledPin3, GPIO.OUT)
 
 
 # Begin generatation of web page showing current state:
