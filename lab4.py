@@ -68,7 +68,7 @@ s1 = data.getvalue('slider1')
 
 #s2 = data.getvalue('slider2')
 data = {"slider1":s1, "L":L}
-with open('led-pwm-multiple.txt', 'w') as f:
+with open('lab4data.txt', 'w') as f:
   json.dump(data,f)
 
 
