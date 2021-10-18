@@ -26,5 +26,5 @@ pwm3.start(0) # start with LED off
 while True:
   with open("led-pwm.txt", 'r') as f:
     dutyCycle = float(f.read()) # read duty cycle value from file
-  pwm2.ChangeDutyCycle(dutyCycle)
+  pwm1.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
