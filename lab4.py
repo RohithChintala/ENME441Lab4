@@ -52,7 +52,7 @@ if ('on' in form): # changed from OFF to ON
 elif ('off' in form) : # changed from ON to OFF
   GPIO.output(ledPin, 0)
 '''
-
+'''
 if ('LED1' in form): # changed from OFF to ON
   GPIO.output(ledPin1, 1)
   L = 1
@@ -62,7 +62,14 @@ elif ('LED2' in form) : # changed from ON to OFF
 elif ('LED3' in form) : # changed from ON to OFF
   GPIO.output(ledPin3, 1)
   L = 3
-
+'''
+if ('LED1' in form): # changed from OFF to ON
+  L = 1
+elif ('LED2' in form) : # changed from ON to OFF
+  L = 2
+elif ('LED3' in form) : # changed from ON to OFF
+  L = 3
+  
 #data = cgi.FieldStorage()
 #p = data.getvalue('slider1')
 s1 = form.getvalue('slider1')
