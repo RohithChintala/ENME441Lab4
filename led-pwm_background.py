@@ -16,8 +16,8 @@ GPIO.setup(ledPin2, GPIO.OUT)
 GPIO.setup(ledPin3, GPIO.OUT)
 
 
-pwm = GPIO.PWM(ledPin1, 100) # PWM object on our pin at 100 Hz
-pwm.start(0) # start with LED off
+pwm1 = GPIO.PWM(ledPin1, 100) # PWM object on our pin at 100 Hz
+pwm1.start(0) # start with LED off
 pwm2 = GPIO.PWM(ledPin2, 100) # PWM object on our pin at 100 Hz
 pwm2.start(0) # start with LED off
 pwm3 = GPIO.PWM(ledPin3, 100) # PWM object on our pin at 100 Hz
