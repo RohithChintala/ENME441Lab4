@@ -17,6 +17,7 @@ cgitb.enable()
 ledPin1 = 19
 ledPin2 = 20
 ledPin3 = 21
+L = 0
 
 # GPIO setup:
 GPIO.setmode(GPIO.BCM)      # choose pin numbering convention (alt = BOARD)
