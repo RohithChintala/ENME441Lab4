@@ -27,7 +27,7 @@ with open('led-pwm.txt', 'w') as f:
 print('Content-type: text/html\n\n')
 print('<html>')
 print('<form action="/cgi-bin/led-pwm.py" method="POST">')
-print('<input type="radio" name="LED" value="a"> LED 1 <br>')
+print('<input type="radio" name="LED" value="a" checked> LED 1 <br>')
 print('<input type="radio" name="LED" value="b"> LED 2 <br>')
 print('<input type="radio" name="LED" value="c"> LED 3 <br>')
 print('<input type="range" name="slider1" min="0" max="100" value="%s"><br>' % s1)
