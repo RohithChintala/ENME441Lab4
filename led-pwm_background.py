@@ -30,6 +30,7 @@ while True:
     dutyCycle = float(data['slider1'])
   pwm1.ChangeDutyCycle(dutyCycle)
   time.sleep(0.1)
+  '''
   if data['Le'] == 'a':
     pwm1.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
@@ -39,7 +40,7 @@ while True:
   if data['Le'] == 'c':
     pwm3.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
-
+'''
 #pwm1.ChangeDutyCycle(dutyCycle)
 #time.sleep(0.1)
 '''
