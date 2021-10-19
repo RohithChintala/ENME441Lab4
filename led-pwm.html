@@ -2,11 +2,11 @@
  and put led-pwm.py file in /usr/lib/cgi-bin/led.py -->
 
 <html>
-<div style="width:600px;background:#AAAAFF;border:1px;text-align:center">
+<div style="width:600px;background:#40E0D0;border:1px;text-align:center">
 <form action="/cgi-bin/led-pwm.py" method="POST">
-<input type="radio" name="LED" value="a"> LED 1 <br>
-<input type="radio" name="LED" value="b"> LED 2 <br>
-<input type="radio" name="LED" value="c"> LED 3 <br>
+<input type="radio" name="LED" value="1"> LED 1 <br>
+<input type="radio" name="LED" value="2"> LED 2 <br>
+<input type="radio" name="LED" value="3"> LED 3 <br>
 <input type="range" name="slider1" min ="0" max="100" value ="50"><br>
 <input type="submit" value="Change LED brightness">
 </form>

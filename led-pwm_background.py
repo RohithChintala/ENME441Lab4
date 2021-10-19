@@ -32,13 +32,13 @@ while True:
   #pwm1.ChangeDutyCycle(dutyCycle)
   #time.sleep(0.1)
   
-  if data['Le'] == 'a':
+  if data['Le'] == '1':
     pwm1.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
-  if data['Le'] == 'b':
+  if data['Le'] == '2':
     pwm2.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
-  if data['Le'] == 'c':
+  if data['Le'] == '3':
     pwm3.ChangeDutyCycle(dutyCycle)
     time.sleep(0.1)
 
