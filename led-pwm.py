@@ -10,7 +10,7 @@ print('Content-type:text/html\n\n')    # blank line = end of headers
 print('<html>')
 print('<head>')
 print('<title>LED switch test</title>')
-print('<meta http-equiv="refresh" content="1">')  # refresh to update LED state
+print('<meta http-equiv="refresh" content="30">')  # refresh to update LED state
 print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#AAAAFF;border:1px;text-align:center">')
@@ -45,7 +45,7 @@ print('<input type="radio" name="LED" value="a" checked> LED 1 <br>')
 print('<input type="radio" name="LED" value="b"> LED 2 <br>')
 print('<input type="radio" name="LED" value="c"> LED 3 <br>')
 print('<input type="range" name="slider1" min="0" max="100" value="%s"><br>' % s1)
-#print('<input type="submit" value="Change LED brightness">')
+print('<input type="submit" value="Change LED brightness">')
 print('</form>')
 print('Brightness = %s' % s1)
 print('LED =', L)
