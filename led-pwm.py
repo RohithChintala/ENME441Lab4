@@ -5,6 +5,20 @@ data = cgi.FieldStorage()
 s1 = data.getvalue('slider1')
 L = data.getvalue('LED')
 
+
+print('Content-type:text/html\n\n')    # blank line = end of headers
+print('<html>')
+print('<head>')
+print('<title>LED switch test</title>')
+print('<meta http-equiv="refresh" content="30">')  # refresh to update LED state
+print('</head>')
+print('<body>')
+print('<div style="width:600px;background:#AAAAFF;border:1px;text-align:center">')
+print('<br>')
+print('<font size="3" color="black" face="helvetica">')
+print('<b>LED switch</b>')
+print('<br><br>')
+
 #if ('LED1' in data): # changed from OFF to ON
 #  L = 1
 #elif ('LED2' in data) : # changed from ON to OFF
