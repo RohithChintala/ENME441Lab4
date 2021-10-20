@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-# This code runs continually in the background to apply
-# the stored PWM slider value to the GPIO output
-
 import RPi.GPIO as GPIO
 import time
 import json
@@ -16,38 +13,23 @@ GPIO.setup(19, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(27, GPIO.OUT)
 
-
 pwm1 = GPIO.PWM(ledPin1, 100) # PWM object on our pin at 100 Hz
-pwm1.start(0) # start with LED off
+pwm1.start(0) # start with LED 1 off
 pwm2 = GPIO.PWM(ledPin2, 100) # PWM object on our pin at 100 Hz
-pwm2.start(0) # start with LED off
+pwm2.start(0) # start with LED 2 off
 pwm3 = GPIO.PWM(ledPin3, 100) # PWM object on our pin at 100 Hz
-pwm3.start(0) # start with LED off
+pwm3.start(0) # start with LED 3 off
 
-while True:
-  with open('led-pwm.txt', 'r') as f:
-    data = json.load(f)
-    dutyCycle = float(data['slider1'])
-  
-  #pwm1.ChangeDutyCycle(dutyCycle)
-  #time.sleep(0.1)
-  
-  if data['Le'] == '1':
-    pwm1.ChangeDutyCycle(dutyCycle)
-    time.sleep(0.1)
-  if data['Le'] == '2':
-    pwm2.ChangeDutyCycle(dutyCycle)
-    time.sleep(0.1)
-  if data['Le'] == '3':
-    pwm3.ChangeDutyCycle(dutyCycle)
-    time.sleep(0.1)
-
-#pwm1.ChangeDutyCycle(dutyCycle)
-#time.sleep(0.1)
-'''
-while True:
-  with open("led-pwm.txt", 'r') as f:
-    dutyCycle = float(f.read()) # read duty cycle value from file
-  pwm1.ChangeDutyCycle(dutyCycle)
-  time.sleep(0.1)
-'''
+while True: #runs continuously
+  with open('led-pwm.txt', 'r') as f: #opens json dump file
+    data = json.load(f) #sets data to be loaded from json dump file
+    dutyCycle = float(data['slider1'])  #sets duty cycle to be a float from data
+  if data['Le'] == '1': #runs if LED 1 is selected in radio button
+    pwm1.ChangeDutyCycle(dutyCycle) #changes duty cycle for LED 1
+    time.sleep(0.1) #sleeps for .1 seconds
+  if data['Le'] == '2':  #runs if LED 2 is selected in radio button
+    pwm2.ChangeDutyCycle(dutyCycle) #changes duty cycle for LED 2
+    time.sleep(0.1) #sleeps for .1 seconds
+  if data['Le'] == '3':  #runs if LED 3 is selected in radio button
+    pwm3.ChangeDutyCycle(dutyCycle) #changes duty cycle for LED 3
+    time.sleep(0.1) #sleeps for .1 seconds
