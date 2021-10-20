@@ -22,7 +22,7 @@ with open('led-pwm.txt', 'w') as f: #opens led-pwm.txt file
   json.dump(slide,f) #uses json to dump dictionary into file
 
 print('<html>')
-print('<form action="/cgi-bin/led-pwm.py" method="POST">')
+print('<form action="/cgi-bin/lab4led.py" method="POST">')
 print('<input type="radio" name="LED" value="1" checked> LED 1 <br>')
 print('<input type="radio" name="LED" value="2"> LED 2 <br>')
 print('<input type="radio" name="LED" value="3"> LED 3 <br>')
