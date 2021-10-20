@@ -9,8 +9,6 @@ L = data.getvalue('LED') #gets led value from website
 print('Content-type:text/html\n\n')
 print('<html>')
 print('<head>')
-#print('<title>LED switch test</title>')
-#print('<meta http-equiv="refresh" content="60">') 
 print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#40E0D0;border:1px;text-align:center">')
